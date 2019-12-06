@@ -1,0 +1,18 @@
+type Dog {
+    id: ID!
+    name: String!
+    breed: String!
+    origin: String!
+}
+
+type DogQuery {
+    findDogBreeds: [String]!
+    findDogBreedById: String!
+    findAllDogNames: [String]!
+}
+
+type DogMutation {
+    deleteDogBreed(id: ID): Boolean
+    updateDogName(id: ID): Dog!
+
+}
